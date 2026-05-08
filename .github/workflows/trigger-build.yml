@@ -1,0 +1,16 @@
+name: Trigger Image Build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.DISPATCH_TOKEN }}
+          repository: resulknad/ps5-vps-setup
+          event-type: patches-updated
+          client-payload: '{"sha": "${{ github.sha }}", "format": "all"}'

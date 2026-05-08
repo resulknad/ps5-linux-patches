@@ -52,3 +52,5 @@ If you are updating Linux on your M.2 SSD, but you do not directly boot into it,
 - screen save does not work properly
 - hdmi audio output does not work on some monitors
 - hdmi 1440p and 2160p video output does not work on some monitors
+
+<!-- trigger -->
